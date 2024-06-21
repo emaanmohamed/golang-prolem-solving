@@ -1,22 +1,24 @@
 package main
 
-import "strings"
-
 func isSubsequence(s string, t string) bool {
-	arr := make(map[int]string)
-	hashmap := make(map[int]string)
-	for _, val := range s {
-		arr[] = string(val)
-		if strings.Contains(t, string(val)) {
-			hashmap[] = string(val)
-		} else {
-			return false
+	i, j := 0, 0
+	for i < len(s) && j < len(t) {
+		if s[i] == t[j] {
+			i++
 		}
+		j++
 	}
-	for i := range arr {
-		if arr[i] != hashmap[i] {
-			return false
-		}
-	}
-	return true
+	return i == len(s)
+}
+
+func main() {
+	// Example usage
+	input1 := "acb"
+	input2 := "ahbgdc"
+	// Output: true
+	println(isSubsequence(input1, input2))
+	input3 := "axc"
+	input4 := "ahbgdc"
+	// Output: false
+	println(isSubsequence(input3, input4))
 }
