@@ -5,12 +5,13 @@ import "strings"
 func strStr(haystack string, needle string) int {
 	if !strings.Contains(haystack, needle) {
 		return -1
-	} else {
-		for index, val := range haystack {
-			if uint8(val) == needle[0] {
-				return index
-				break
-			}
+	}
+
+	haystackLen := len(haystack)
+	needleLen := len(needle)
+	for i := 0; i <= haystackLen-needleLen; i++ {
+		if haystack[i:i+needleLen] == needle {
+			return i
 		}
 	}
 	return -1
