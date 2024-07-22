@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //Write an algorithm to determine if a number n is happy.
 //
 //A happy number is a number defined by the following process:
@@ -53,4 +55,5 @@ func main() {
 	input2 := 2
 	// Output: false
 	println(isHappy(input2))
+	fmt.Println()
 }
