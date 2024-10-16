@@ -31,7 +31,6 @@ func twoSum(nums []int, target int) []int {
 		complement := target - val
 		if _, ok := hashMap[complement]; ok {
 			return []int{hashMap[complement], key}
-
 		}
 		hashMap[val] = key
 	}

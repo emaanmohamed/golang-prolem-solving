@@ -19,3 +19,5 @@ func rotate(nums []int, k int) {
 	temp = append(temp, nums[:len(nums)-k]...)
 	copy(nums, temp)
 }
+
+
