@@ -1,4 +1,4 @@
-package Hashmap
+package main
 
 import "fmt"
 
